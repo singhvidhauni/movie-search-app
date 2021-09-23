@@ -26,7 +26,7 @@
 </template>
 ```
 ### Vue Components in the App component, <script></script>
-  
+```
 <script>
 import SearchField from './components/searchfield/SearchField.vue';
 import ResultUI from './components/resultslist/ResultUI.vue';
