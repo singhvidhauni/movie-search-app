@@ -1,24 +1,53 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container-fluid">
+      <div id="movieapp">
+          <!-- Search Field of the App -->
+          <SearchField/>
+
+          <div class="result">
+              <div class="row">
+                  <!-- <div class="col-xs-12">
+                      <p class="px-3 text-mute" v-html="noResultsMessage"></p>
+                  </div> -->
+
+                  <!-- Search Result list Component -->
+                  <ResultUI/>
+                  <!-- Disclaimer Text -->
+                  <Disclaimer/>
+              </div>
+          </div>
+      </div>
+  </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+// import HelloWorld from './components/HelloWorld.vue';
+import SearchField from './components/searchfield/SearchField.vue';
+import ResultUI from './components/resultslist/ResultUI.vue';
+import Disclaimer from './components/disclaimer/Disclaimer.vue';
 
 export default {
   name: 'App',
+  methods: {
+    updateDisclaimerInfo(results) {
+      // eslint-disable-next-line no-undef
+      this.moviesSearched = results;
+    },
+  },
   components: {
-    HelloWorld,
+    SearchField,
+    ResultUI,
+    Disclaimer,
+  },
+  created() {
+    this.eventBus.on('resultFetched', this.updateDisclaimerInfo);
   },
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
