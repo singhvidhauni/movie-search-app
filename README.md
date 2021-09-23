@@ -29,3 +29,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 **[Uses a third party library mitt to dispatch events between components(Event Bus)]**<br>
 **[Axios library to make ajax calls to TMDB(The Movie Database https://api.themoviedb.org))]**<br>
 
+![image](https://user-images.githubusercontent.com/4363033/134492983-ad73c8b4-3891-47ed-90f3-fe8bd4a3fabb.png) ![image](https://user-images.githubusercontent.com/4363033/134493097-6ef5d615-2fcd-4f4b-9b11-002364e839eb.png)
+
+
