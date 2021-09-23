@@ -53,6 +53,7 @@ export default {
 ```
   
 ### Vue Components in the App component, <style></style>
+```
 <style>
 #app {
   text-align: center;
@@ -60,6 +61,7 @@ export default {
   margin-top: 60px;
 }
 </style>
+```
   
 ## Project setup
 ```
